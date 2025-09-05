@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Arifin Setyawan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    .skill-bar { transition: width 2s ease-in-out; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in-up { animation: fadeInUp 0.6s ease-out; }
+  </style>
+</head>
+<body class="smooth-scroll bg-gray-50">
+
+<!-- Tempel semua kode HTML kamu di sini -->
+<!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-gray-800">Arifin Setyawan</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Beranda</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">Tentang</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors">Pengalaman</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Keahlian</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Kontak</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Beranda</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">Tentang</a>
+                <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600">Pengalaman</a>
+                <a href="#skills" class="block py-2 text-gray-600 hover:text-blue-600">Keahlian</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4 fade-in-up">
+            <div class="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full flex items-center justify-center text-6xl">
+                📊
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Arifin Setyawan</h1>
+            <p class="text-xl md:text-2xl mb-8 text-white/90">Python & Data Analyst (Entry-level) | Operasional & Supply</p>
+            <p class="text-lg mb-8 max-w-3xl mx-auto text-white/80">
+                Halo, saya Arifin. Saya fokus belajar data analysis dan automasi berbasis Python untuk membantu keputusan bisnis—khususnya di industri makanan, distribusi, dan pendidikan. Berpengalaman memimpin tim gudang/produksi, mengelola stok FIFO, serta membuat dashboard laporan penjualan. Saat ini saya membangun portofolio data & web (Python/Django) sambil membuka peluang kolaborasi.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="downloadCV()" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Unduh CV (PDF)
+                </button>
+                <a href="https://wa.me/628884060622?text=Pesan anda : " target="_blank" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    WhatsApp
+                </a>
+                <a href="mailto:arifinscoutpasker@gmail.com" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-8xl text-white">
+                        🐍
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Profil Singkat</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Latar belakang SMK Teknik Elektro, Kuliah bahasa arab dan studi islam di Ma'had Abdurrahman bin Auf - Univ. Muhammadiyah Malang. Pengalaman kompleks di pabrik roti & bahan kebab ; Distribusi (Kirim dan take order bahan baku / hasil produksi dari gudang ke gudang cabang),
+                        (operasional gudang, QC, packaging horizontal machine, distribusi). Terbiasa menyusun regulasi stok FIFO, monitoring 
+                        hasil produksi, dan koordinasi tim.
+                        <br>
+                        Hal yang menantang dalam pengalaman ini adalah :
+                        <br>
+                        1. Management stock barang jadi di dalam gudang suhu ruang dan cold storage dalam kondisi over kapasitas. Jika di dalam cold storage sudah full dan di luar masih ada stock maka harus dirolling masuk cold storage. Butuh tenaga besar karena berat produk per keranjang rata-rata 30 Kg dikalikan ratusan keranjang ditambah suhu cold storage yang minus di bawah 0⁰Celcius dan butuh waktu berjam-jam di dalamnya dengan pintu harus tertutup ( sesekali keluar untuk menghangatkan badan ) untuk rolling tanggal produksi dan harus menumpuk keranjang produk tersebut sampai 12 keranjang ke atas. Sering mengerjakan sendiri karena minim SDM.
+                        <br> 
+                        2. Setiap saat harus menghadapi interaksi dengan ratusan orang dengan karakter yang berbeda-beda mulai dari bagian produksi, sopir kernet, administrasi, dll.
+                         
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Minat: Python, analitik penjualan, automasi laporan, dan pertanian rumah tangga (PLTS, hidroponik, kebun). 
+                        Saat ini fokus membangun portofolio data analysis dan web development dengan Python/Django.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">📧 Email</h4>
+                            <p class="text-gray-600">arifinscoutpasker@gmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">📱 WhatsApp</h4>
+                            <p class="text-gray-600">+628884060622</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">📍 Lokasi</h4>
+                            <p class="text-gray-600">Kec. Dau, Kab. Malang, Jawa Timur, Indonesia</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">💼 GitHub</h4>
+                            <p class="text-gray-600">github.com/arifins</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pengalaman Kerja</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Experience Item 1 -->
+                <div class="bg-white rounded-lg shadow-md p-8 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Warehouse/Production Coordinator</h3>
+                            <p class="text-blue-600 font-medium">Pabrik Roti & Bahan Kebab</p>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">2016 – 2023</span>
+                        </div>
+                    </div>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Menghimpun hasil produksi ke checker, sortir, dan QC</li>
+                        <li>• Mengoperasikan & melakukan perawatan ringan mesin packaging horizontal</li>
+                        <li>• Mendata total hasil produksi (lolos QC vs defect) & membuat rekap harian</li>
+                        <li>• Menyiapkan distribusi barang jadi ke gudang/storages; pendataan & pelacakan</li>
+                        <li>• Menetapkan & mengawasi regulasi stok FIFO; evaluasi sisa stok</li>
+                        <li>• Mengelola bahan baku packaging & sarana prasarana tim</li>
+                        <li>• Memimpin & menjadwalkan tim; substitusi posisi saat ada kebutuhan mendesak</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="bg-white rounded-lg shadow-md p-8 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Wali Kelas / Pengelola Data Kelas</h3>
+                            <p class="text-blue-600 font-medium">Institusi Pendidikan</p>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">2024 – Sekarang</span>
+                        </div>
+                    </div>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Menyusun rekap kehadiran, nilai, dan timestamp pelajaran</li>
+                        <li>• Pembuatan template Excel & Google Sheets untuk administrasi kelas</li>
+                        <li>• Analisis sederhana untuk insight pembelajaran & ketercapaian materi</li>
+                        <li>• Koordinasi dengan guru mata pelajaran dan orang tua siswa</li>
+                    </ul>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg shadow-md p-8 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Proyek Portofolio</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">📊 Dashboard Penjualan Kantin</h4>
+                            <p class="text-gray-600 text-sm">Excel/Sheets - Menyatukan transaksi multi-sheet berdasarkan nama pembeli; pivot, lookup, & rumus IF bersusun untuk pelaporan harian–bulanan.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">🚴 Analisis Bike Sharing Dataset</h4>
+                            <p class="text-gray-600 text-sm">Python - Eksplorasi pengaruh cuaca & pola jam terhadap jumlah peminjaman; grafik tren & insight operasional.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">📦 Prototype FIFO Stock Monitor</h4>
+                            <p class="text-gray-600 text-sm">Python + Sheets - Template pencatatan stok masuk/keluar berbasis FIFO dengan peringatan sisa stok & umur stok.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Pendidikan & Pelatihan</h3>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow-md p-8 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">SMK - Teknik Elektro</h4>
+                                <p class="text-blue-600 font-medium">SMK Negeri Tempursari - Lumajang</p>
+                            </div>
+                            <div class="text-gray-500 mt-2 md:mt-0">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">2013</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-8 card-hover">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Webinar & Kursus</h4>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800">Python for Data Fundamental</h5>
+                                <p class="text-gray-600 text-sm">2025</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800">Dasar Data Analytics</h5>
+                                <p class="text-gray-600 text-sm">2025</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800">Machine Learning ( Dicoding )</h5>
+                                <p class="text-gray-600 text-sm">Sedang Berjalan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Keahlian</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Keahlian Utama</h3>
+                    
+                    <!-- Data & Coding -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 mb-3">Data & Coding</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-600">Python (pandas, numpy, matplotlib)</span>
+                                    <span class="text-gray-500">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-600">Excel/Google Sheets (Pivot, Lookup, IF)</span>
+                                    <span class="text-gray-500">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-600">SQL (dasar)</span>
+                                    <span class="text-gray-500">60%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-purple-600 h-2 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-600">Django (dasar)</span>
+                                    <span class="text-gray-500">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-orange-600 h-2 rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics & Tools -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 mb-3">Analitik & Tools</h4>
+                        <div class="grid grid-cols-2 gap-3 text-sm">
+                            <div class="bg-blue-50 p-2 rounded">📊 Analisis Penjualan</div>
+                            <div class="bg-green-50 p-2 rounded">📈 Dashboard KPI</div>
+                            <div class="bg-purple-50 p-2 rounded">🔍 Tren Permintaan</div>
+                            <div class="bg-yellow-50 p-2 rounded">📋 Basic Forecasting</div>
+                            <div class="bg-red-50 p-2 rounded">⚡ Power BI (dasar)</div>
+                            <div class="bg-indigo-50 p-2 rounded">🔧 Git/GitHub</div>
+                        </div>
+                    </div>
+
+                    <!-- Operational Skills -->
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-3">Operasional</h4>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                <span>FIFO & Manajemen Stok</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                                <span>Quality Control & Packaging</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                <span>Koordinasi Distribusi</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-orange-600 rounded-full"></div>
+                                <span>Pencatatan Produksi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Interests -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Soft Skills</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">🎯</div>
+                            <h4 class="font-semibold text-gray-800">Analisis Data</h4>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">👥</div>
+                            <h4 class="font-semibold text-gray-800">Koordinasi Tim</h4>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">📊</div>
+                            <h4 class="font-semibold text-gray-800">Problem Solving</h4>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg text-center card-hover">
+                            <div class="text-3xl mb-2">⚡</div>
+                            <h4 class="font-semibold text-gray-800">Automasi Proses</h4>
+                        </div>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Minat & Hobi</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                                <span class="text-gray-700">Kebutuhan Rumah Tangga (PLTS Home System, Hidroponik, Kebun Organik, Berternak)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                <span class="text-gray-700">Belajar Data Analytics & Visualization</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                <span class="text-gray-700">Belajar Automasi Laporan Bisnis</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-orange-600 rounded-full"></div>
+                                <span class="text-gray-700">Belajar Web Development (Python/Django)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Future Certifications -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Target Sertifikasi</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                <span class="text-gray-700">Google Data Analytics Certificate</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                <span class="text-gray-700">Microsoft Power BI Data Analyst</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span class="text-gray-700">Python for Data Science (Coursera)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hubungi Saya</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-white/90 text-lg">Saya terbuka untuk kesempatan kerja dan siap berdiskusi lebih lanjut terkait posisi yang relevan dengan pengalaman dan keterampilan saya.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Informasi Kontak</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                📧
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-white/80">arifinscoutpasker@gmail.com</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/628884060622?text=Pesan anda : " target="_blank" class="flex items-center space-x-4 hover:bg-white/10 p-3 rounded-lg transition-colors group">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                                📱
+                            </div>
+                            <div>
+                                <h4 class="font-semibold group-hover:text-white transition-colors">WhatsApp</h4>
+                                <p class="text-white/80 group-hover:text-white/90 transition-colors">+628884060622</p>
+                                <p class="text-white/60 text-sm group-hover:text-white/80 transition-colors">Klik untuk chat langsung</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                📍
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Lokasi</h4>
+                                <p class="text-white/80">Kec. Dau, Kab. Malang, Jawa Timur, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                💼
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">LinkedIn</h4>
+                                <p class="text-white/80">linkedin.com/in/arifin-setyawan-aa4385196/</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                🔧
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">GitHub</h4>
+                                <p class="text-white/80">github.com/Arifins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Kirim Pesan</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <input type="text" id="name" placeholder="Nama Anda / Instansi" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50">
+                        </div>
+                        <div>
+                            <input type="email" id="email" placeholder="Email" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50">
+                        </div>
+                        <div>
+                            <input type="text" id="subject" placeholder="Subjek" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50">
+                        </div>
+                        <div>
+                            <textarea id="message" rows="4" placeholder="Pesan Anda" required
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/50 resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                            class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 text-center hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flexibility Note -->
+    <section class="py-12 bg-yellow-50 border-t-4 border-yellow-400">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-400 relative">
+                <div class="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full shadow-md"></div>
+                <div class="flex items-start space-x-4">
+                    <div class="text-3xl">📝</div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Catatan Penting</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Saya tertarik untuk mencoba posisi yang ditawarkan meskipun mungkin perlu belajar sedikit di awal. 
+                            Pengalaman saya dalam operasional, data management, dan koordinasi tim memberikan fondasi yang kuat 
+                            untuk beradaptasi dengan berbagai peran administratif dan analitis. Saya percaya bahwa kombinasi 
+                            <strong>pengalaman praktis</strong> dan <strong>semangat belajar</strong> akan membantu saya berkontribusi 
+                            maksimal dalam posisi yang tepat.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Adaptable</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Quick Learner</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Growth Mindset</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Arifin Setyawan. Dibuat dengan ❤️ menggunakan HTML, CSS & JavaScript.</p>
+            <p class="text-gray-400 text-sm mt-2">Python & Data Analyst | Suka tantangan dan pelajari peluang baru</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simulate form submission
+            formMessage.className = 'mt-4 text-center text-yellow-300';
+            formMessage.textContent = 'Mengirim pesan...';
+            formMessage.classList.remove('hidden');
+            
+            setTimeout(() => {
+                formMessage.className = 'mt-4 text-center text-green-300';
+                formMessage.textContent = '✅ Pesan berhasil dikirim! Terima kasih atas pesan Anda.';
+                
+                // Reset form
+                this.reset();
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 2000);
+        });
+
+        // CV Download function
+        function downloadCV() {
+            // Create a simple text CV content
+            const cvContent = `
+CURRICULUM VITAE
+================
+
+Nama: Arifin Setyawan
+Profesi: Python & Data Analyst (Entry-level) | Operasional & Supply
+Email: emailanda@domain.com
+WhatsApp: +62-XXXXXXXXXX
+Lokasi: Indonesia (Remote/Freelance)
+LinkedIn: linkedin.com/in/username
+GitHub: github.com/username
+
+PROFIL SINGKAT:
+Latar belakang SMK; beralih karier ke pemrograman & data analytics. 
+Pengalaman di pabrik roti & bahan kebab (operasional gudang, QC, packaging horizontal, distribusi). 
+Terbiasa menyusun regulasi stok FIFO, monitoring hasil produksi, dan koordinasi tim.
+
+PENGALAMAN KERJA:
+- Warehouse/Production Coordinator - Pabrik Roti & Bahan Kebab
+  • Menghimpun hasil produksi ke checker, sortir, dan QC
+  • Mengoperasikan & melakukan perawatan ringan mesin packaging horizontal
+  • Mendata total hasil produksi & membuat rekap harian
+  • Menetapkan & mengawasi regulasi stok FIFO
+  • Memimpin & menjadwalkan tim
+
+- Wali Kelas / Pengelola Data Kelas - Institusi Pendidikan
+  • Menyusun rekap kehadiran, nilai, dan timestamp pelajaran
+  • Pembuatan template Excel & Google Sheets
+  • Analisis sederhana untuk insight pembelajaran
+
+KEAHLIAN UTAMA:
+Data & Coding:
+- Python (pandas, numpy, matplotlib) - 80%
+- Excel/Google Sheets (Pivot, Lookup, IF) - 90%
+- SQL (dasar) - 60%
+- Django (dasar) - 50%
+
+Analitik Bisnis:
+- Analisis penjualan, tren permintaan, efisiensi stok
+- Dashboard KPI, basic forecasting
+- Power BI (dasar), Git/GitHub
+
+Operasional:
+- FIFO & Manajemen Stok
+- Quality Control & Packaging
+- Koordinasi Distribusi
+- Pencatatan Produksi
+
+PROYEK PORTOFOLIO:
+- Dashboard Penjualan Kantin (Excel/Sheets)
+- Analisis Bike Sharing Dataset (Python)
+- Prototype FIFO Stock Monitor (Python + Sheets)
+
+PENDIDIKAN & PELATIHAN:
+- SMK - [Jurusan], [Sekolah], [Tahun]
+- Webinar Software Testing (2025)
+- Dasar Data Analytics (2025)
+- Python for Data (sedang berjalan)
+
+MINAT:
+Python, analitik penjualan, automasi laporan, pertanian rumah tangga (PLTS, hidroponik, kebun)
+            `;
+            
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CV_Arifin_Setyawan.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            // Show download confirmation
+            alert('CV berhasil didownload! 📄');
+        }
+
+        // Animate skill bars when in view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        bar.style.width = bar.style.width || '0%';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white/95');
+                nav.classList.remove('bg-white/90');
+            } else {
+                nav.classList.add('bg-white/90');
+                nav.classList.remove('bg-white/95');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970a1f6434d2a8ea',t:'MTc1NTQ0MzY4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  function downloadCV() {
+    alert('Fitur download CV belum tersedia di versi Apps Script. Gunakan link Google Drive untuk CV Anda.');
+  }
+</script>
+
+</body>
+</html>
