@@ -714,13 +714,15 @@ Python, analitik penjualan, automasi laporan, pertanian rumah tangga (PLTS, hidr
 //    alert('Fitur download CV belum tersedia di versi Apps Script. Gunakan link Google Drive untuk CV Anda.');
 //  }
 
-  
+  document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
   async function downloadCV() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF("p", "pt", "a4");
 
     // Ambil elemen CV (ganti "cv" dengan id container utama CV kamu)
-    const cvElement = document.getElementById("cv") || document.body;
+    const cvElement = document.getElementById("about") || document.body;
 
     // Generate PDF
     await doc.html(cvElement, {
