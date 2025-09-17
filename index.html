@@ -707,8 +707,29 @@ Python, analitik penjualan, automasi laporan, pertanian rumah tangga (PLTS, hidr
   });
 
   function downloadCV() {
-    alert('Fitur download CV belum tersedia di versi Apps Script. Gunakan link Google Drive untuk CV Anda.');
+//    alert('Fitur download CV belum tersedia di versi Apps Script. Gunakan link Google Drive untuk CV Anda.');
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF("p", "pt", "a4");
+
+    // Ambil elemen CV (ganti "cv" dengan id container utama CV kamu)
+    const cvElement = document.getElementById("about") || document.body;
+
+    // Generate PDF
+    await doc.html(cvElement, {
+      callback: function (doc) {
+        doc.save("CV-Arifin-Setyawan.pdf");
+      },
+      margin: [20, 20, 20, 20],
+      autoPaging: 'text',
+      x: 0,
+      y: 0,
+      width: 500,
+      windowWidth: 1200
+    });
   }
+  }
+  
 </script>
 
 </body>
