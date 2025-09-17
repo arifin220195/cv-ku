@@ -698,18 +698,45 @@ Python, analitik penjualan, automasi laporan, pertanian rumah tangga (PLTS, hidr
             }
         });
     </script>
+  
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'970a1f6434d2a8ea',t:'MTc1NTQ0MzY4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 
 
-<script>
-  document.getElementById('mobile-menu-btn').addEventListener('click', function () {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
+<!-- jsPDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  function downloadCV() {
-    alert('Fitur download CV belum tersedia di versi Apps Script. Gunakan link Google Drive untuk CV Anda.');
+<script>
+  //  document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+  //  document.getElementById('mobile-menu').classList.toggle('hidden');
+  // });
+
+//  function downloadCV() {
+//    alert('Fitur download CV belum tersedia di versi Apps Script. Gunakan link Google Drive untuk CV Anda.');
+//  }
+
+  
+  async function downloadCV() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF("p", "pt", "a4");
+
+    // Ambil elemen CV (ganti "cv" dengan id container utama CV kamu)
+    const cvElement = document.getElementById("cv") || document.body;
+
+    // Generate PDF
+    await doc.html(cvElement, {
+      callback: function (doc) {
+        doc.save("CV-Arifin-Setyawan.pdf");
+      },
+      margin: [20, 20, 20, 20],
+      autoPaging: 'text',
+      x: 0,
+      y: 0,
+      width: 500,
+      windowWidth: 1200
+    });
   }
 </script>
+
 
 </body>
 </html>
